@@ -4,15 +4,15 @@ interface ConcertsProps {
 
 const translations = {
   en: {
-    heading: "Upcoming Concerts",
+    heading: "Key Milestones",
     learnMore: "Learn More",
   },
   de: {
-    heading: "Kommende Konzerte",
+    heading: "Wichtige Meilensteine",
     learnMore: "Mehr erfahren",
   },
   ru: {
-    heading: "Предстоящие концерты",
+    heading: "Ключевые события",
     learnMore: "Подробнее",
   },
 }
@@ -20,71 +20,113 @@ const translations = {
 const concerts = {
   en: [
     {
-      date: "08.12.2024",
-      time: "18:00",
-      title: "Piano Recital",
-      venue: "Torhaus Hamburg",
-      location: "Hamburg",
+      date: "1792",
+      time: "Kettering, England",
+      title: "Founded the Baptist Missionary Society",
+      venue: "The historic sermon: \"Expect great things from God\"",
+      location: "England",
     },
     {
-      date: "16.12.2024",
-      time: "19:00",
-      title: "Piano Recital HFMT",
-      venue: "Hamburg, Orchestra Studio",
-      location: "Hamburg",
+      date: "1793",
+      time: "India",
+      title: "Arrived in India",
+      venue: "Began mission work in Bengal, later settled in Serampore",
+      location: "India",
     },
     {
-      date: "21.12.2024",
-      time: "17:00",
-      title: "Charity Concert",
-      venue: "Rathaus Zehlendorf, Burgersaal",
-      location: "Berlin",
+      date: "1801",
+      time: "Serampore",
+      title: "First Bengali New Testament Published",
+      venue: "Serampore Mission Press — the first Bible in an Asian language",
+      location: "India",
+    },
+    {
+      date: "1818",
+      time: "Serampore",
+      title: "Founded Serampore College",
+      venue: "First college in Asia open to students of all castes and faiths",
+      location: "India",
+    },
+    {
+      date: "1829",
+      time: "Calcutta",
+      title: "Sati Abolished by Law",
+      venue: "Carey's decades of campaigning contributed to the official ban",
+      location: "India",
     },
   ],
   de: [
     {
-      date: "08.12.2024",
-      time: "18:00",
-      title: "Klavierabend",
-      venue: "Torhaus Hamburg",
-      location: "Hamburg",
+      date: "1792",
+      time: "Kettering, England",
+      title: "Grundung der Baptist Missionary Society",
+      venue: "Die historische Predigt: 'Erwarte Grosses von Gott'",
+      location: "England",
     },
     {
-      date: "16.12.2024",
-      time: "19:00",
-      title: "Klavierabend HFMT",
-      venue: "Hamburg, Orchesterstudio",
-      location: "Hamburg",
+      date: "1793",
+      time: "Indien",
+      title: "Ankunft in Indien",
+      venue: "Beginn der Missionsarbeit in Bengalen, spater in Serampore",
+      location: "Indien",
     },
     {
-      date: "21.12.2024",
-      time: "17:00",
-      title: "Benefizkonzert",
-      venue: "Rathaus Zehlendorf, Burgersaal",
-      location: "Berlin",
+      date: "1801",
+      time: "Serampore",
+      title: "Erstes bengalisches Neues Testament veroffentlicht",
+      venue: "Serampore Mission Press — erste Bibel in einer asiatischen Sprache",
+      location: "Indien",
+    },
+    {
+      date: "1818",
+      time: "Serampore",
+      title: "Grundung des Serampore College",
+      venue: "Erstes College in Asien, offen fur alle Kasten und Religionen",
+      location: "Indien",
+    },
+    {
+      date: "1829",
+      time: "Kalkutta",
+      title: "Sati durch Gesetz verboten",
+      venue: "Careys jahrzehntelanger Einsatz trug zum offiziellen Verbot bei",
+      location: "Indien",
     },
   ],
   ru: [
     {
-      date: "8 декабря 2024",
-      time: "18:00",
-      title: "Сольный концерт",
-      venue: "Торхаус Гамбург",
-      location: "Гамбург",
+      date: "1792",
+      time: "Кеттеринг, Англия",
+      title: "Основание Баптистского миссионерского общества",
+      venue: "Историческая проповедь: «Ожидай великого от Бога»",
+      location: "Англия",
     },
     {
-      date: "16 декабря 2024",
-      time: "19:00",
-      title: "Концерт в HFMT",
-      venue: "Гамбург, Оркестровая студия",
-      location: "Гамбург",
+      date: "1793",
+      time: "Индия",
+      title: "Прибытие в Индию",
+      venue: "Начало миссионерской работы в Бенгалии, затем в Серампоре",
+      location: "Индия",
     },
     {
-      date: "21 декабря 2024",
-      time: "17:00",
-      title: "Благотворительный концерт",
-      venue: "Ратуша Целендорф, Бургерзаль",
-      location: "Берлин",
+      date: "1801",
+      time: "Серампор",
+      title: "Издан первый Новый Завет на бенгальском языке",
+      venue: "Типография Серампорской миссии — первая Библия на азиатском языке",
+      location: "Индия",
+    },
+    {
+      date: "1818",
+      time: "Серампор",
+      title: "Основание Серампорского колледжа",
+      venue: "Первый колледж в Азии, открытый для всех независимо от касты",
+      location: "Индия",
+    },
+    {
+      date: "1829",
+      time: "Калькутта",
+      title: "Сати запрещено законом",
+      venue: "Многолетняя борьба Кэри способствовала официальному запрету",
+      location: "Индия",
     },
   ],
 }
@@ -115,9 +157,7 @@ export default function Concerts({ language }: ConcertsProps) {
                   <small className="text-taupe">{concert.location}</small>
                 </div>
                 <div className="flex justify-start md:justify-end">
-                  <button className="text-gold hover:text-gold/80 transition-colors text-sm font-medium">
-                    {t.learnMore} &rarr;
-                  </button>
+                  <span className="text-taupe text-sm">{concert.location}</span>
                 </div>
               </div>
             </div>

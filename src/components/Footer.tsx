@@ -5,33 +5,33 @@ interface FooterProps {
 const translations = {
   en: {
     copyright: "All rights reserved.",
-    followMe: "Follow",
-    subtitle: "Classical Pianist",
+    followMe: "Resources",
+    subtitle: "Father of Modern Missions · 1761–1834",
     quickLinks: "Quick Links",
     biography: "Biography",
-    concerts: "Concerts",
+    concerts: "Milestones",
     gallery: "Gallery",
     privacyPolicy: "Privacy Policy",
     terms: "Terms",
   },
   de: {
     copyright: "Alle Rechte vorbehalten.",
-    followMe: "Folgen Sie mir",
-    subtitle: "Klassischer Pianist",
+    followMe: "Ressourcen",
+    subtitle: "Vater der modernen Mission · 1761–1834",
     quickLinks: "Schnelllinks",
-    biography: "Biographie",
-    concerts: "Konzerte",
+    biography: "Biografie",
+    concerts: "Meilensteine",
     gallery: "Galerie",
     privacyPolicy: "Datenschutz",
     terms: "AGB",
   },
   ru: {
     copyright: "Все права защищены.",
-    followMe: "Соцсети",
-    subtitle: "Классический пианист",
+    followMe: "Ресурсы",
+    subtitle: "Отец современных миссий · 1761–1834",
     quickLinks: "Навигация",
     biography: "Биография",
-    concerts: "Концерты",
+    concerts: "События",
     gallery: "Галерея",
     privacyPolicy: "Политика конфиденциальности",
     terms: "Условия",
@@ -46,7 +46,7 @@ export default function Footer({ language }: FooterProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-warm-white mb-4">А. Фосс</h3>
+            <h3 className="text-warm-white mb-4">William Carey</h3>
             <small className="text-warm-white/70">{t.subtitle}</small>
           </div>
 
@@ -73,19 +73,19 @@ export default function Footer({ language }: FooterProps) {
 
           <div>
             <h3 className="text-warm-white mb-4">{t.followMe}</h3>
-            <div className="flex gap-4">
-              <a href="https://instagram.com" className="text-warm-white/70 hover:text-gold transition-colors">
-                Instagram
+            <div className="flex flex-col gap-2">
+              <a href="https://en.wikipedia.org/wiki/William_Carey_(missionary)" target="_blank" rel="noopener noreferrer" className="text-warm-white/70 hover:text-gold transition-colors text-sm">
+                Wikipedia
               </a>
-              <a href="https://facebook.com" className="text-warm-white/70 hover:text-gold transition-colors">
-                Facebook
+              <a href="https://www.wholesomewords.org/missions/carey.html" target="_blank" rel="noopener noreferrer" className="text-warm-white/70 hover:text-gold transition-colors text-sm">
+                Wholesome Words
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-warm-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-warm-white/70">
-          <small>&copy; 2025 Александр Фосс. {t.copyright}</small>
+          <small>&copy; 2025 William Carey. {t.copyright}</small>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-warm-white transition-colors">
               {t.privacyPolicy}
